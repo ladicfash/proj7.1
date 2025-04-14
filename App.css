@@ -1,0 +1,60 @@
+.app {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  width: 250px;
+  background-image: url('https://media.istockphoto.com/id/1353996708/photo/earth-as-viewed-from-mars-surface-the-surface-of-mars-strewn-with-small-rocks-and-red-sand.jpg?s=612x612&w=0&k=20&c=hv2AQYekbJNKJX4kKMKQTc2CjRnO21GbjEUOze2UoUs=');
+  background-size: cover;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease-in-out;
+  z-index: 1;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.sidebar:hover {
+  width: 300px;
+}
+
+.sidebar:active {
+  width: 250px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: var(--secondary-color);
+  overflow-x: hidden;
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+/* Added media query for responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  .sidebar:hover {
+    width: 250px;
+  }
+}
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #4d40403d;
+  --text-color: #fff;
+}
+
+.sidebar {
+  background-color: var(--primary-color);
+}
