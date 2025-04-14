@@ -1,0 +1,105 @@
+/* Mars-Inspired Color Palette */
+:root {
+  --mars-red: #b33939;
+  --dust-orange: #cd6133;
+  --mars-dark: #1e272e;
+  --mars-gray: #485460;
+  --mars-light: #d2dae2;
+  --mars-white: #f5f6fa;
+  --mars-accent: #ff793f;
+  --primary-font: 'Orbitron', sans-serif;
+  --secondary-font: 'Inter', Arial, sans-serif;
+}
+
+/* Reset & Base */
+body {
+  margin: 0;
+  font-family: var(--primary-font);
+  background-color: var(--mars-dark);
+  color: var(--mars-white);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--mars-accent);
+  letter-spacing: 1px;
+  font-family: var(--secondary-font);
+}
+
+a {
+  color: var(--mars-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Containers */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cards */
+.card {
+  background-color: var(--mars-gray);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(255, 121, 63, 0.2);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--mars-red);
+  color: var(--mars-white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 1rem auto;
+}
+
+.btn:hover {
+  background-color: var(--dust-orange);
+}
+
+/* Chart Containers */
+.chart-box {
+  background-color: var(--mars-gray);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive Stuff */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .chart-box {
+    padding: 0.5rem;
+  }
+}
